@@ -14,6 +14,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    
 }
 
 /*
@@ -100,34 +101,50 @@ html {
   background-color: lightskyblue;
   height: 100%;
   width: 100%;
+  
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-weight: 700;
+  padding: 0 2em;
+  font-size: 1.25em;
   height: 100%;
-  color: lightslategray;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+header h1{
+    font-family: 'Lora', sans-serif;
+    font-size: 3em;  
 }
 
 header, footer{
-    background-color: lightskyblue;
-    height: 80px;
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 main {
-    background-color: lightskyblue;
-    height: 250px;
+    
     width: 100%;
-}
-
-header,
-footer,
-main {
+    border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
+}
+
+main p{
+    font-size: 1.4em;
+}
+
+
+footer{
+    border-top: 1px solid black;
+}
+
+footer img{
+    padding: 30px 20px 0 0;
 }
 
 .wrapper {
@@ -136,12 +153,12 @@ main {
   display:flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
+  max-width: 1200px;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: lightslategray;
+  
   line-height: 1.5em;
   font-size: 1.25em;
   height: auto;
@@ -149,6 +166,7 @@ main {
   /*width: 30%*/
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 
 
@@ -232,15 +250,23 @@ main {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media all and (min-width: 768px){
+    body{
+        padding: 1em;
+    }
+}
 
-@media all and (min-width: 1200px) {
+   @media all and (min-width: 1200px) {
     .div-1, .div-2, .div-3 {
         flex-basis: 30%;
+        border-bottom: none;
+        
     }
 
-    .div-1, .div-2 {
-        border-right: 1px solid rgb(188, 227, 252);
-        padding-right: 30px;
+     .div-2 p {
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        padding: 0 30px;
     }
 
     .div-1, .div-2, .div-3{
