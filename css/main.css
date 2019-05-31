@@ -110,6 +110,26 @@ body {
   color: lightslategray;
 }
 
+header, footer{
+    background-color: lightskyblue;
+    height: 80px;
+    width: 100%;
+}
+
+main {
+    background-color: lightskyblue;
+    height: 250px;
+    width: 100%;
+}
+
+header,
+footer,
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   
@@ -221,6 +241,11 @@ body {
     .div-1, .div-2 {
         border-right: 1px solid rgb(188, 227, 252);
         padding-right: 30px;
+    }
+
+    .div-1, .div-2, .div-3{
+        /* border-top:1px solid rgb(188, 227, 252); */
+        /*border-bottom: 1px solid rgb(188, 227, 252); this does not work for the top and bottom border*/
     }
 }
 
